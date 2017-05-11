@@ -621,6 +621,7 @@ def kernel_evaluation(A,x,x_prime,centroid):
     else:
         temp=0
     return(temp)
+
 def new_colour_function(centroid,area_triangles,volume_fraction,A):
     # Finds the colour function using the kernel evaluation
     new_volume_fraction=[]
@@ -630,6 +631,7 @@ def new_colour_function(centroid,area_triangles,volume_fraction,A):
             sum=sum+kernel_evaluation(A,x,i,centroid)*volume_fraction[i]*area_triangles[i]
         new_volume_fraction.append(sum)
     return(new_volume_fraction)
+
 def find_height(volume_fraction,points,test,normal_x,normal_y,circle_center,intersection):
 
     #rectangle parameters
